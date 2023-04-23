@@ -13,7 +13,7 @@ player는 문제 풀기에 사용된 지갑을 의미합니다
  
 
 ## 문제
-` // SPDX-License-Identifier: MIT
+``` // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -25,4 +25,4 @@ contract ERC20Init{
     function setWeb3ojt(address _web3ojt) public {
         web3ojt = ERC20(_web3ojt);
     }
-} `
+} ```
