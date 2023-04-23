@@ -1,13 +1,28 @@
-# Sample Hardhat Project
+# ERC-20 토큰을 만들어보시오
+Name : Web3 Online Judge Token
+Symbol : WEB3OJT
+Total Supply : 2,000,000,000 (20억개) (decimal: 18)
+ 
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+단, 생성한 WEB3OJT 토큰에 대해서 20억 WEB3OJT는 Player가 가지고 있도록 하시오
 
-Try running some of the following tasks:
+토큰 생성을 하였으면 ERC20Init의 setWeb3ojt(address _web3ojt)을 통해서 생성한 토큰주소를 등록하고 제출하시오
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+player는 문제 풀기에 사용된 지갑을 의미합니다
+
+ 
+
+## 문제
+`// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract ERC20Init{
+    ERC20 public web3ojt;
+
+    function setWeb3ojt(address _web3ojt) public {
+        web3ojt = ERC20(_web3ojt);
+    }
+}`
